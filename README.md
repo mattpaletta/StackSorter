@@ -23,7 +23,7 @@ StackSorterV3 L = new StackSorterV3();
 # Implentation Details:
 The pseudocode for the main function of the algorithm is as follows
 
-`sort(A)  
+```sort(A)  
  Create new linked list of stacks  
  for i in 0 —> length of A  
   insert(a[i])  
@@ -32,14 +32,14 @@ The pseudocode for the main function of the algorithm is as follows
  for i in 0 —> length of A  
   a[i] = remove()  
   increment i  
-`
+```
   
 The sort() method simply reads every value of the array, A, and calls the insert method to insert them into the list. It then calls the remove method to systematically insert the items back into the array in sorted order.  
   
   
   
 ### The pseudocode for the insert function is as follows:  
-`insert(value)  
+```insert(value)  
  newNode = new node() //make a new node  
   
  if head == null // if the list is empty  
@@ -58,7 +58,7 @@ The sort() method simply reads every value of the array, A, and calls the insert
   
   push the value onto newNode  
   add newNode to end of the list  
-`
+```
   
 The insert function creates a new node. If there are no nodes in the list, it inserts the value passed in on the new node. It then makes head node equal to the new node. If there is at least one element in the list, it checks to see if the value is smaller than the top of the first list. If it is, it pushes the node onto the top of the first stack and returns. If it is not, it continues through the list and checks the top of every stack until it finds a stack such that the top element is larger than the value. If it finds a stack, it adds the value to the top of the stack. If it gets to the end of the list, without finding a stack, it creates a new node at the end of the list, and puts the value on the stack of the newly created node.  
   
@@ -66,7 +66,7 @@ The insert function creates a new node. If there are no nodes in the list, it in
   
 The pseudocode for the remove function is as follows:  
   
-`remove()  
+```remove()  
  create new node min  
   
  keep track of previous node, initialize to null.  
@@ -87,7 +87,7 @@ The pseudocode for the remove function is as follows:
    prev.next = min.next //remove node from middle of the list  
   
  return a  
-`  
+```  
 The remove function goes through the list every time, and pops the stack with the smallest element. It then checks to see if that stack is now empty, if it is, it removes that node from the list.  
   
 Here is a diagram of what the stack might look like after the insertion step:  
